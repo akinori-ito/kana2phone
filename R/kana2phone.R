@@ -23,7 +23,7 @@ kana2phone <- function(str) {
       ch <- substr(str,i,i)
       i <- i+1
       if (i > 1  && 
-	      substr(str,i,1) %in% c("ァ","ィ","ゥ","ェ","ォ","ャ","ュ","ョ")) {
+	      substr(str,i,i) %in% c("ァ","ィ","ゥ","ェ","ォ","ャ","ュ","ョ")) {
          ch <- substr(str,i-1,i)
          i <- i+1
       }
