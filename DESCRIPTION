@@ -1,0 +1,10 @@
+Package: kana2phone
+Title: Convert a Katakana string into a phone vector
+Version: 0.0.1
+Authors@R: person("Akinori", "Ito", email = "aito@fw.ipsj.or.jp", role = c("aut", "cre"))
+Description: Convert a Katakana string into a phone vector.
+Depends: R (>= 3.0.0)
+License: LGPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: stringr
