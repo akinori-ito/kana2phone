@@ -32,7 +32,7 @@ kana2phone <- function(str) {
          stop(paste("Can't convert",ch,"into phonemes"))
       }
       p <- K2P_TBL$phone[p]
-      if (i < str_length(str) && substr(str,i,i) == "ー") {
+      if (i > 1 && substr(str,i,i) == "ー") {
          p <- paste(p, ":", sep="")
          i <- i+1
       }
