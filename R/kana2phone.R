@@ -38,6 +38,6 @@ kana2phone <- function(str) {
       }
       res <- c(res,p)
     }
-    str_split(paste(res,collapse=" ")," ")
+    str_split(paste(res,collapse=" ")," ")[[1]]
 }
 
