@@ -1,6 +1,6 @@
-# かな表記を音素表記の配列に変換
+# 縺九↑陦ｨ險倥ｒ髻ｳ邏陦ｨ險倥�ｮ驟榊�励↓螟画鋤
 
-# 音素体系
+# 髻ｳ邏菴鍋ｳｻ
 # 
 # silB silE
 # N a a: i i: u u: e e: o o:
@@ -8,12 +8,12 @@
 # b by ch d f g gy h hy j k ky m my n ny p py q r ry s sh t ts z
 
 
-K2P_TBL <- read.csv("kanaphone.csv",as.is=T,fileEncoding="UTF-8")
+#K2P_TBL <- read.csv("kanaphone.csv",as.is=T,fileEncoding="UTF-8")
 
 #' Convert a kana string to a phone vector
 #' @param str a katakana string
-#' @importfrom stringr str_length
-#' @importfrom stringr str_split
+#' @importFrom stringr str_length
+#' @importFrom stringr str_split
 #' @export
 #'
 kana2phone <- function(str) {
@@ -23,7 +23,7 @@ kana2phone <- function(str) {
       ch <- substr(str,i,i)
       i <- i+1
       if (i < str_length(str) && 
-	      substr(str,i,1) %in% c("ァ","ィ","ゥ","ェ","ォ","ャ","ュ","ョ")) {
+	      substr(str,i,1) %in% c("繧｡","繧｣","繧･","繧ｧ","繧ｩ","繝｣","繝･","繝ｧ")) {
          ch <- substr(str,i-1,i)
          i <- i+1
       }
@@ -32,7 +32,7 @@ kana2phone <- function(str) {
          stop(paste("Can't convert",ch,"into phonemes"))
       }
       p <- K2P_TBL$phone[p]
-      if (i < str_length(str) && substr(str,i,i) == "ー") {
+      if (i < str_length(str) && substr(str,i,i) == "繝ｼ") {
          p <- paste(p, ":", sep="")
          i <- i+1
       }
