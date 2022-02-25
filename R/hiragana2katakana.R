@@ -4,6 +4,7 @@
 #' @param x a string (contains hiragana)
 #' @return a string where all hiraganas are substituted into katakanas
 #' @importFrom stringr str_length
+#' @export
 hiragana2katakana <- function(x) {
     r <- c()
     for (i in 1:str_length(x)) {
