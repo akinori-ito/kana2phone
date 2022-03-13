@@ -21,7 +21,7 @@ kana2phone <- function(str) {
     i <- 1
     while (i <= str_length(str)) {
       ch <- substr(str,i,i)
-      if (ch %in% c("、","。","．","，")) {
+      if (ch %in% c("、","。","．","，","？","！")) {
          res <- c(res,"sp")
          i <- i+1
          next
