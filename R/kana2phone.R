@@ -23,6 +23,8 @@ kana2phone <- function(str) {
       ch <- substr(str,i,i)
       if (ch %in% c("、","。","．","，")) {
          res <- c(res,"sp")
+         i <- i+1
+         next
       }
       i <- i+1
       if (i > 1  && 
