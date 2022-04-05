@@ -2,5 +2,6 @@
 
 export(hiragana2katakana)
 export(kana2phone)
+export(katakana2hiragana)
 importFrom(stringr,str_length)
 importFrom(stringr,str_split)
