@@ -33,19 +33,19 @@ roman2katakana <- function(rom) {
 }
 
 ### preparation (comment on commit)
-library(dplyr)
-library(openxlsx)
-x <- read.xlsx("../state.xlsx")
-x$output[is.na(x$output)] <- ""
-R2K_TBL<-list()
-for (st in 1:(max(x$state)+1)) {
-  R2K_TBL[[st]] <- list()
-}
-for (i in 1:nrow(x)) {
-  st <- x$state[i]+1
-  input <- x$input[i]
-  R2K_TBL[[st]][[input]]<-list(output=x$output[i],nextstate=x$nextstate[i]+1)
-}
-xx <- dplyr::filter(x,state==9,input=="n")
-NN <- xx$output
-save(R2K_TBL,NN,file="../data/R2K_TBL.rda")
+# library(dplyr)
+# library(openxlsx)
+# x <- read.xlsx("../state.xlsx")
+# x$output[is.na(x$output)] <- ""
+# R2K_TBL<-list()
+# for (st in 1:(max(x$state)+1)) {
+#   R2K_TBL[[st]] <- list()
+# }
+# for (i in 1:nrow(x)) {
+#   st <- x$state[i]+1
+#   input <- x$input[i]
+#   R2K_TBL[[st]][[input]]<-list(output=x$output[i],nextstate=x$nextstate[i]+1)
+# }
+# xx <- dplyr::filter(x,state==9,input=="n")
+# NN <- xx$output
+# save(R2K_TBL,NN,file="../data/R2K_TBL.rda")
